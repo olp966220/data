@@ -24,5 +24,5 @@ df['time'] = df['formatted'].apply(extract_str_from_brackets)
 df_sorted = df.sort_values(by='birth_rate(births/1k population)', ascending=True)
 result = df_sorted[['time', 'region', 'placeName', 'birth_rate(births/1k population)']]
 result.to_csv('born_rate.xlsx', sep='\t', index=False)
-
+result.to_html('test.html', index=False)
 
